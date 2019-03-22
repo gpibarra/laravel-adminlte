@@ -1,0 +1,21 @@
+.skin-green .box-primary {
+    border-top-color: #00a65a !important;
+}
+
+.skin-green .panel-primary {
+    border-color: #00a65a !important;
+}
+
+.skin-green .panel-primary>.panel-heading {
+    background-color: #00a65a !important;
+    border-color: #30473d !important;
+}
+
+.skin-green .panel-primary>.panel-heading .badge {
+    color: #00a65a !important;
+}
+
+.btn-default-color {
+    color: #FFFFFF !important;
+    background-color: #00a65a !important;
+}

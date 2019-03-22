@@ -1,0 +1,1 @@
+@include('LaravelAdminLTE::auth.passwords.email')
