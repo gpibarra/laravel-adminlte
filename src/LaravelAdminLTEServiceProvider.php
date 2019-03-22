@@ -41,7 +41,7 @@ class LaravelAdminLTEServiceProvider extends ServiceProvider
 
         // publish public assets
         $this->publishes([__DIR__.'/public' => public_path('vendor/gpibarra')], 'public');
-        $this->publishes([__DIR__.'/public-gitignore/public-gpibarra-plugins' => public_path('vendor/gpibarra/plugins')], 'public');
+        $this->publishes([__DIR__.'/public-gitignore/gpibarra-plugins' => public_path('vendor/gpibarra/plugins')], 'public');
 
         //CONFIG
         // use the vendor configuration file as fallback
@@ -56,7 +56,7 @@ class LaravelAdminLTEServiceProvider extends ServiceProvider
         $vendorPath = dirname(__DIR__, 3);
 
         // publish public AdminLTE assets
-        $this->publishes([__DIR__.'/public-gitignore/public-adminlte' => public_path('vendor/adminlte')], 'adminlte');
+        $this->publishes([__DIR__.'/public-gitignore/adminlte' => public_path('vendor/adminlte')], 'adminlte');
         $this->publishes([$vendorPath.'/almasaeed2010/adminlte' => public_path('vendor/adminlte')], 'adminlte');
 
 
