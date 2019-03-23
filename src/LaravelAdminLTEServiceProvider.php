@@ -76,7 +76,7 @@ class LaravelAdminLTEServiceProvider extends ServiceProvider
 
         //Views
         view()->composer('*', function($view) {
-            AdminLTE::setViewName($view);
+            AdminLTE::setView($view);
         });
 
     }

@@ -5,9 +5,10 @@ namespace gpibarra\LaravelAdminLTE;
 
 class LaravelAdminLTEManager
 {
-     private $view_name;
-     private $blError = false;
-     private $blLogin = false;
+    private $view;
+    private $view_name;
+    private $blError = false;
+    private $blLogin = false;
 
     /**
      * Appends the configured adminlte prefix and returns
@@ -36,12 +37,15 @@ class LaravelAdminLTEManager
         return asset('vendor/gpibarra/')."/img/"."User-blue-icon.png";
     }
 
-    public function setViewName($view) {
-        $this->view_name = $view->getName();
-        $this->blLogin = false;
-        $this->blError = false;
-        if ($this->view_name == 'auth.login') $this->blLogin = true;
-        if (\Illuminate\Support\Str::startsWith($this->view_name,'errors::')) $this->blError = true;
+    public function setView($v) {
+        $this->view[] = $v;
+        $this->view_name[] = $v->getName();
+        if ($v->getName() == 'auth.login') $this->blLogin = true;
+        if (\Illuminate\Support\Str::startsWith($v->getName(),'errors::')) $this->blError = true;
+    }
+
+    public function getView() {
+        return $this->view;
     }
 
     public function getViewName() {
