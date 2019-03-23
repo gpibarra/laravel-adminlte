@@ -56,8 +56,8 @@ class LaravelAdminLTEServiceProvider extends ServiceProvider
         $vendorPath = dirname(__DIR__, 3);
 
         // publish public AdminLTE assets
-        $this->publishes([__DIR__.'/public-gitignore/adminlte' => public_path('vendor/adminlte')], 'adminlte');
-        $this->publishes([$vendorPath.'/almasaeed2010/adminlte' => public_path('vendor/adminlte')], 'adminlte');
+        $this->publishes([__DIR__.'/public-gitignore/adminlte' => public_path('vendor/adminlte')], 'public-adminlte');
+        $this->publishes([$vendorPath.'/almasaeed2010/adminlte' => public_path('vendor/adminlte')], 'public-adminlte');
 
 
 
