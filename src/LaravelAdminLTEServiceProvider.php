@@ -32,7 +32,7 @@ class LaravelAdminLTEServiceProvider extends ServiceProvider
         // publish views
         $this->publishes([__DIR__.'/resources/views-layouts' => resource_path('views/layouts')], 'views-default');
         $this->publishes([__DIR__.'/resources/views-auth' => resource_path('views/auth')], 'views-default');
-        $this->publishes([__DIR__.'/resources/views-errors' => resource_path('views/auth')], 'views-default');
+        $this->publishes([__DIR__.'/resources/views-errors' => resource_path('views/errors')], 'views-default');
         $this->publishes([__DIR__.'/resources/views' => resource_path('views/vendor/gpibarra/LaravelAdminLTE')], 'views');
 
         // publish lang files
