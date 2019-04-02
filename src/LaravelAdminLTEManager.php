@@ -42,6 +42,7 @@ class LaravelAdminLTEManager
         $this->view_name[] = $v->getName();
         if ($v->getName() == 'auth.login') $this->blLogin = true;
         if (\Illuminate\Support\Str::startsWith($v->getName(),'errors::')) $this->blError = true;
+        if (\Illuminate\Support\Str::startsWith($v->getName(),'errors.')) $this->blError = true;
     }
 
     public function getView() {
