@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "almasaeed2010/AdminLTE" : "~2.4",
+        "almasaeed2010/adminlte" : "~2.4",
         "davejamesmiller/laravel-breadcrumbs" : "^5.2",
         "fxp/composer-asset-plugin": "^1.2.0",
         "prologue/alerts": "0.4.*"
